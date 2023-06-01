@@ -1,0 +1,8 @@
+<!-- nav>ul>li*5>a[href="#"]{Menú $} -->
+<nav>
+    <ul>
+        <li *ngFor="let opcion of menu">
+            <a href="{{opcion.ruta}}">{{opcion.titulo}}</a>
+        </li>
+    </ul>
+</nav>
