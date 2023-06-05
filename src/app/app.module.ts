@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { TituloComponent } from './titulo.component';
 import { JlPieComponent } from './jl-pie/jl-pie.component';
 import { JlMenuComponent } from './jl-menu/jl-menu.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { JlMenuComponent } from './jl-menu/jl-menu.component';
     JlMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

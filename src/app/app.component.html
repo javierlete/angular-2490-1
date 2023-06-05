@@ -1,5 +1,37 @@
-<jl-menu [menu]="[{titulo: 'Home', ruta: '/'}, {titulo: 'About', ruta: '/about'}]"></jl-menu>
+<jl-menu [menu]="opcionesMenu"></jl-menu>
 
-<jl-titulo titulo="Pasado por atributo"></jl-titulo>
+<main>
+    <jl-titulo [titulo]="titulo"></jl-titulo>
+    
+    <form>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="loginForm.email">
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" [(ngModel)]="loginForm.password">
+        </div>
+        <div>
+            <button type="button" (click)="onLoginClick()">Login</button>
+            <pre>{{ loginForm | json }}</pre>
+            <pre>{{ email.value }},{{ password.value }}</pre>
+        </div>
+    </form>
+    <form>
+        <div>
+            <label for="email-variable">Email</label>
+            <input type="email" id="email-variable" #email value="{{loginForm.email}}">
+        </div>
+        <div>
+            <label for="password-variable">Contraseña</label>
+            <input type="password" id="password-variable" #password value="{{loginForm.password}}">
+        </div>
+        <div>
+            <button type="button" (click)="onLoginVariablesClick(email.value, password.value)">Login</button>
+            <pre>{{ email.value }},{{ password.value }}</pre>
+        </div>
+    </form>
+</main>
 
 <jl-pie></jl-pie>

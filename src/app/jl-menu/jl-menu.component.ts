@@ -7,10 +7,5 @@ import { OpcionMenu } from '../opcion-menu';
   styleUrls: ['./jl-menu.component.css']
 })
 export class JlMenuComponent {
-  @Input() menu: OpcionMenu[] = [
-    { titulo: 'Inicio', ruta: '/' },
-    { titulo: 'Clientes', ruta: '/clientes' },
-    { titulo: 'Productos', ruta: '/productos' },
-    { titulo: 'Ventas', ruta: '/ventas' }
-  ]
+  @Input() menu: OpcionMenu[] = [];
 }

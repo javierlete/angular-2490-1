@@ -10,3 +10,24 @@
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+main {
+    padding: 1rem;
+}
+
+input, button {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    margin: 0.25rem 0;
+}
+
+label {
+    display: inline-block;
+    width: 5rem;
+}
+
+button {
+    position: relative;
+    left: 5rem;
+}
