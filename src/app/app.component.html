@@ -4,28 +4,36 @@
     <jl-titulo [titulo]="titulo"></jl-titulo>
     
     <form>
+        <jl-labelinput id="nombre" [valor]="usuarioForm.nombre" (valorChange)="usuarioForm.nombre = $event"></jl-labelinput>
+        <jl-labelinput id="apellido" [(valor)]="usuarioForm.apellido"></jl-labelinput>
+        <jl-labelinput id="nacimiento" [valor]="usuarioForm.nacimiento" tipo="date"></jl-labelinput>
+        <jl-labelinput id="email" [(valor)]="usuarioForm.email"></jl-labelinput>
+        <jl-labelinput id="password" [(valor)]="usuarioForm.password" tipo="password"></jl-labelinput>
+    </form>
+
+    <form>
         <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" [(ngModel)]="loginForm.email">
+            <label for="emailBinding">Email</label>
+            <input type="email" id="emailBinding" name="email" [(ngModel)]="usuarioForm.email">
         </div>
         <div>
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" [(ngModel)]="loginForm.password">
+            <label for="passwordBinding">Contraseña</label>
+            <input type="password" id="passwordBinding" name="password" [(ngModel)]="usuarioForm.password">
         </div>
         <div>
             <button type="button" (click)="onLoginClick()">Login</button>
-            <pre>{{ loginForm | json }}</pre>
+            <pre>{{ usuarioForm | json }}</pre>
             <pre>{{ email.value }},{{ password.value }}</pre>
         </div>
     </form>
     <form>
         <div>
             <label for="email-variable">Email</label>
-            <input type="email" id="email-variable" #email value="{{loginForm.email}}">
+            <input type="email" id="email-variable" #email value="{{usuarioForm.email}}">
         </div>
         <div>
             <label for="password-variable">Contraseña</label>
-            <input type="password" id="password-variable" #password value="{{loginForm.password}}">
+            <input type="password" id="password-variable" #password value="{{usuarioForm.password}}">
         </div>
         <div>
             <button type="button" (click)="onLoginVariablesClick(email.value, password.value)">Login</button>
